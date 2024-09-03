@@ -47,9 +47,6 @@ make
 // make sure you in bin directory ,and this has a test.conf file
 raftCoreRun -n 3 -f test.conf
 ```
-这里更推荐一键运行，使用clion/clion nova，点击这个按钮即可：
-![img.png](docs/images/img.png)
-
 正常运行后，命令行应该有如下raft的运行输出：
 ```
 20231228 13:04:40.570744Z 615779 INFO  TcpServer::newConnection [RpcProvider] - new connection [RpcProvider-127.0.1.1:16753#2] from 127.0.0.1:37234 - TcpServer.cc:80
@@ -77,21 +74,6 @@ raftCoreRun -n 3 -f test.conf
 
 #### 使用kv
 在启动raft集群之后启动`callerMain`即可。
-
-
-## Docs
-- 如果你想创建自己的rpc，请参考example中rpc的md文件和friendRPC相关代码.此外可以见rpc分支
-- 各个文件夹文件内容说明：[这里](./docs/目录导览.md)
-> notice:在代码编写过程中可能有一些bug改进，其他分支可能并没有修复这些bug以及相应的改进。注意甄别
->同时欢迎issue提出这些bug或者pr改进。
-
-## todoList
-
-- [x] 完成raft节点的集群功能
-- [ ] 去除冗余的库：muduo、boost 
-- [ ] 代码精简优化
-- [x] code format
-- [ ] 代码解读 maybe
 
 
 
